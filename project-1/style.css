@@ -1,11 +1,6 @@
 /*--text + fonts--*/
 
 @font-face {
-    font-family: "dogicapixel";
-    src: url(asset/dogicapixel.ttf) format("truetype");
-}
-
-@font-face {
     font-family: "silkscreen";
     src: url(asset/slkscr.ttf) format("truetype");
 }
@@ -13,32 +8,6 @@
 @font-face {
     font-family: "silkscreen-exp";
     src: url(asset/slkscre.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "pixelmix";
-    src: url(asset/pixelmix.ttf) format("truetype");
-}
-
-.dark {
-    color: #232323;
-}
-
-.light {
-    color: #f7f7f7;
-}
-
-.x {
-    font-size: 1.5em
-}
-
-.y {
-    color: #c4d31f
-}
-
-.z {
-    color: #c4d31f;
-    font-size: 2em;
 }
 
 
@@ -68,6 +37,7 @@ body {
     cursor: url(asset/cursor-rsz.png), auto;
 }
 
+
 a {
     color: #c4d31f;
 }
@@ -78,13 +48,11 @@ a:link {
     cursor: url(asset/cursor-rsz.png), default;
 }
 
-
 a:visited {
     text-decoration: none;
     color: #c4d31f;
     cursor: url(asset/cursor-rsz.png), default;
 }
-
 
 a:hover {
     text-decoration: none;
@@ -92,12 +60,12 @@ a:hover {
     cursor: url(asset/cursor-rsz.png), default;
 }
 
-
 a:active {
     text-decoration: none;
     color: #c4d31f;
     cursor: url(asset/cursor-rsz.png), default;
 }
+
 
 summary {
     border: none;
@@ -117,8 +85,8 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-.y-sh{
-text-shadow: 2px 1px 7px rgba(0,0,0,0.1);
+.y-sh {
+    text-shadow: 2px 1px 7px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -188,7 +156,6 @@ text-shadow: 2px 1px 7px rgba(0,0,0,0.1);
 
 .bg-calm {
     background-image: url(asset/calm.gif);
-    padding-top: 2em;
     text-align: right;
     display: grid;
 }
@@ -221,7 +188,7 @@ text-shadow: 2px 1px 7px rgba(0,0,0,0.1);
     background-image: url(asset/rain.gif);
     text-align: left;
     padding: 3em;
-text-shadow: 2px 1px 7px #fff;
+    text-shadow: 2px 1px 7px #fff;
 }
 
 .bg-snow {

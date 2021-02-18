@@ -1,0 +1,78 @@
+/*--fonts--*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+
+/*--header--*/
+
+h1 {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: 'Lexend Mega', sans-serif;
+    color: #b76655;
+    font-size: 20px;
+}
+
+hr {
+    height: 8px;
+    background-color: #e4dcdd;
+    border: 0;
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke-width: 0.01px;
+    -webkit-text-stroke-color: #e4dcdd;
+}
+
+
+
+/*--body--*/
+
+h2 {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: #b76655;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+body {
+    background-color: #202020;
+    color: #e4dcdd;
+    
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+
+
+/*--links--*/
+
+a {
+    text-decoration: none;
+    color: #F4D06F;
+
+}
+
+a:hover {
+    color: #b76655;
+}
