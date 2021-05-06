@@ -81,8 +81,11 @@ details {
     margin: auto;
 }
 
-summary::-webkit-details-marker {
-    display: none;
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
 .y-sh {
@@ -201,4 +204,17 @@ summary::-webkit-details-marker {
     background-image: url(asset/stars.gif);
     text-align: left;
     padding: 3em;
+}
+
+#sourceslink {
+	position: absolute;
+	bottom: 5%;
+	
+}
+
+.sources {
+	text-align: center;
+	margin: auto;
+	width: 50%;
+	
 }
