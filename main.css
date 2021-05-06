@@ -1,88 +1,318 @@
+/*
+gradient animation adapted from https://www.gradient-animator.com/
+parallax scrolling adapted from https://codepen.io/ravid7000/pen/LREEzv
+*/
+
 /*--fonts--*/
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 
-
-/*--header--*/
+/*--text styles--*/
 
 h1 {
-    font-family: 'Lexend Mega', sans-serif;
-    font-size: 50px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 00;
+	font-size: 5em;
+	font-style: italic;
+	overflow: visible;
 }
-
-h4 {
-    font-family: 'Lexend Mega', sans-serif;
-    color: #b76655;
-    font-size: 20px;
-}
-
-hr {
-    height: 8px;
-    background-color: #e4dcdd;
-    border: 0;
-}
-
-.outline {
-    color: transparent;
-    -webkit-text-stroke-width: 0.01px;
-    -webkit-text-stroke-color: #e4dcdd;
-}
-
-
-
-/*--body--*/
 
 h2 {
-    font-family: 'Lexend Mega', sans-serif;
-    font-size: 20px;
-    text-decoration: underline;
-    text-decoration-color: #b76655;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 3.5em;
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+	-webkit-text-stroke: 1.5px black;
+	-webkit-text-fill-color: transparent;
+	line-height: 1;
 }
+
+.light {
+	-webkit-text-stroke: 1.5px white;
+}
+
+h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.fixed a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	text-transform: lowercase;
+	font-weight: bolder;
+	color: yellow;
+	text-decoration: none;
+	text-shadow: 1px 0 10px rgba(0, 0, 0, 0.1)
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+ul {
+	list-style: none;
+}
+
+.thoughts a {
+	color: yellow;
+	text-shadow: 1px 0 10px rgba(0, 0, 0, 0.15);
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+
+/*--margins--*/
 
 body {
-    background-color: #202020;
-    color: #e4dcdd;
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+}
 
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 7%;
-    margin-bottom: 7%;
-
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    letter-spacing: 5px;
-    font-size: 16px;
+.thoughts {
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-right: 25%;
+	margin-bottom: 10%;
 }
 
 
+/*--parallax scrolling--*/
 
-/*--links--*/
-
-a {
-    text-decoration: none;
-    color: #F4D06F;
-
+.section {
+	text-align: left;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	letter-spacing: 4px;
+	overflow: hidden;
+	clip: rect(0, auto, auto, 0);
 }
 
-a:hover {
-    color: #b76655;
+.section .fixed {
+	overflow: visible;
+	position: fixed;
+	left: 30%;
+	right: 14%;
+	top: 30%;
+}
+
+/*--title section--*/
+
+.section:nth-child(1) {
+	background-color: #e0e3d4;
+	color: #000;
+	top: 0;
+	z-index: 1;
+}
+
+.section:nth-child(1) .fixed {
+	transform: translate(-50%, -10%);
+}
+
+/*--presentation section--*/
+
+.section:nth-child(2) {
+	background-color: #b8cac9;
+	color: #222;
+	top: 100vh;
+	z-index: 2;
+}
+
+.section:nth-child(2) .fixed {
+	transform: translate(-10%, -50%);
+}
+
+/*--projects section--*/
+
+.section:nth-child(3) {
+	color: #fff;
+	top: 200vh;
+	z-index: 3;
+	text-align: right;
+}
+
+.section:nth-child(3) .fixed {
+	transform: translate(-10%, -40%);
+}
+
+/*--exercises section--*/
+
+.section:nth-child(4) {
+	background-color: #d6c5c5;
+	color: #222;
+	top: 300vh;
+	z-index: 4;
+}
+
+.section:nth-child(4) .fixed {
+	transform: translate(-40%, -50%);
+}
+
+/*--thoughts section--*/
+
+.section:nth-child(5) {
+	color: #fff;
+	top: 400vh;
+	z-index: 5;
+}
+
+.section:nth-child(5) .fixed {
+	transform: translate(20%, -50%);
+}
+
+/*--text overlay gradient--*/
+
+.gradient-text {
+	background-color: #5c4169;
+	background-image: linear-gradient(90deg, #d88485, #643977, #221e53);
+	background-size: 200%;
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+
+	-webkit-animation: gradient-text 9s ease infinite;
+	-moz-animation: gradient-text 9s ease infinite;
+	animation: gradient-text 9s ease infinite;
+}
+
+@-webkit-keyframes gradient-text {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes gradient-text {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes gradient-text {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/*--gradient background--*/
+
+.section.gradient-bg {
+	background-image: linear-gradient(120deg, #d88485, #643977, #221e53);
+	background-size: 200% 200%;
+
+	-webkit-animation: gradient-bg 12s ease infinite;
+	-moz-animation: gradient-bg 12s ease infinite;
+	animation: gradient-bg 12s ease infinite;
+}
+
+@-webkit-keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
 }
 
 
-/*--p5--*/
+/*--previews on hover--*/
 
-iframe {
-    width: 600px;
-    height: 600px;
-    border: none;
-    overflow: hidden;
+
+img {
+	width: 60%;
+	position: absolute;
+}
+
+.sketch {
+	left: 70%;
+	overflow: hidden;
+	top: 30%;
+	display: none;
+}
+
+.project {
+	right: 50%;
+	top: 40%;
+	overflow: hidden;
+	display: none;
 }
