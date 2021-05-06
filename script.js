@@ -1,14 +1,19 @@
 $(document).ready(function() {
 	
-	
-    $("#hover-3a").hover(function () {
-        $("#preview-3a").toggle();
-    })
-	
 	    $("#hover-hn").hover(function () {
         $("#preview-hn").toggle();
     })
 	
+	    $("#hover-proj2").hover(function () {
+        $("#preview-proj2").toggle();
+    })
 	
+	    $("#hover-proj3").hover(function () {
+        $("#preview-proj3").toggle();
+    })
+	
+		    $("#hover-pk").hover(function () {
+        $("#preview-pk").toggle();
+    })
 	
 })

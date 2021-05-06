@@ -1,6 +1,6 @@
 /*
 gradient animation adapted from https://www.gradient-animator.com/
-parallax scrolling adapted from https://codepen.io/ravid7000/pen/LREEzv
+parallax scrolling adapted from https://codepen.io/ravid7000/pen/LREEzv !! :)
 */
 
 /*--fonts--*/
@@ -8,7 +8,6 @@ parallax scrolling adapted from https://codepen.io/ravid7000/pen/LREEzv
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
 
 /*--text styles--*/
 
@@ -33,10 +32,11 @@ h3 {
 	text-transform: uppercase;
 	font-style: italic;
 	font-weight: bold;
-	color: white;
 	-webkit-text-stroke: 1.5px black;
 	-webkit-text-fill-color: transparent;
 	line-height: 1;
+	/*--vv fallback for unsupported browsers-*/
+	color: white;
 }
 
 .light {
@@ -51,16 +51,6 @@ h4 {
 	text-transform: uppercase;
 }
 
-.fixed a {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 2em;
-	text-transform: lowercase;
-	font-weight: bolder;
-	color: yellow;
-	text-decoration: none;
-	text-shadow: 1px 0 10px rgba(0, 0, 0, 0.1)
-}
-
 p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.2em;
@@ -72,14 +62,45 @@ ul {
 	list-style: none;
 }
 
+/*--links--*/
+
+a {
+	text-decoration: none;
+	text-shadow: 1px 0 10px rgba(0, 0, 0, 0.1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(to right, #d88485, #d88485 50%, yellow 50%);
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: all 0.4s ease-out;
+}
+
+a:before {
+	background: #d88485;
+	transition: all 0.4s ease-out;
+}
+
+a:hover {
+	background-position: 0%;
+}
+
+a:hover:before {
+	width: 100%;
+}
+
+.fixed a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	text-transform: lowercase;
+	font-weight: bolder;
+}
+
 .thoughts a {
-	color: yellow;
 	text-shadow: 1px 0 10px rgba(0, 0, 0, 0.15);
 	font-weight: 700;
 	letter-spacing: 1px;
 	text-decoration: none;
 }
-
 
 /*--margins--*/
 
@@ -97,7 +118,6 @@ body {
 	margin-bottom: 10%;
 }
 
-
 /*--parallax scrolling--*/
 
 .section {
@@ -106,7 +126,7 @@ body {
 	width: 100%;
 	height: 100vh;
 	letter-spacing: 4px;
-	overflow: hidden;
+	overflow: visible;
 	clip: rect(0, auto, auto, 0);
 }
 
@@ -115,7 +135,7 @@ body {
 	position: fixed;
 	left: 30%;
 	right: 14%;
-	top: 30%;
+	top: 25%;
 }
 
 /*--title section--*/
@@ -128,7 +148,7 @@ body {
 }
 
 .section:nth-child(1) .fixed {
-	transform: translate(-50%, -10%);
+	transform: translate(-50%, -30%);
 }
 
 /*--presentation section--*/
@@ -154,7 +174,7 @@ body {
 }
 
 .section:nth-child(3) .fixed {
-	transform: translate(-10%, -40%);
+	transform: translate(-20%, -28%);
 }
 
 /*--exercises section--*/
@@ -167,7 +187,7 @@ body {
 }
 
 .section:nth-child(4) .fixed {
-	transform: translate(-40%, -50%);
+	transform: translate(-40%, -25%);
 }
 
 /*--thoughts section--*/
@@ -188,7 +208,6 @@ body {
 	background-color: #5c4169;
 	background-image: linear-gradient(90deg, #d88485, #643977, #221e53);
 	background-size: 200%;
-	background-repeat: repeat;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
@@ -294,25 +313,50 @@ body {
 	}
 }
 
-
 /*--previews on hover--*/
 
-
 img {
-	width: 60%;
 	position: absolute;
+	opacity: 0.7;
 }
 
+/* -- this will be for p5 --
 .sketch {
 	left: 70%;
 	overflow: hidden;
 	top: 30%;
 	display: none;
 }
+*/
 
-.project {
-	right: 50%;
+#preview-hn {
+	width: 60%;
+	right: 40%;
+	top: 10%;
+	overflow: hidden;
+	display: none;
+}
+
+#preview-proj2 {
+	width: 45%;
+	right: 35%;
 	top: 40%;
+	overflow: hidden;
+	display: none;
+}
+
+#preview-proj3 {
+	width: 60%;
+	right: 65%;
+	top: 65%;
+	overflow: hidden;
+	display: none;
+}
+
+#preview-pk {
+	width: 55%;
+	left: 65%;
+	top: 50%;
 	overflow: hidden;
 	display: none;
 }
